@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
+import { AllPlants } from '../shared/plants.interfaces';
+import { HomeService } from './home.service';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -12,10 +15,23 @@ export class HomeComponent implements OnInit {
         middle: false,
         right: false
     };
+    plantas: AllPlants;
 
     focus;
     focus1;
-    constructor() { }
+    constructor(private homeService: HomeService) {
+     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.homeService.getAllPlants().subscribe(
+            dt =>{
+                this.plantas = dt;
+                
+        console.log(this.plantas);
+            }
+        );
+        
+    }
+
+
 }

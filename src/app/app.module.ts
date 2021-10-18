@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-
 import { HomeComponent } from './home/home.component';
+import { HomeService } from './home/home.service';
 /*
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
@@ -32,9 +33,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
