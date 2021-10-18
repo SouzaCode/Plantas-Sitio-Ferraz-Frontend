@@ -73,4 +73,7 @@ export class AppComponent implements OnInit {
       });
       this.hasScrolled();
     }
+    getPath(){
+        return this.router.url;
+      }
 }

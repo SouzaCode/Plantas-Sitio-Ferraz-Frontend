@@ -34,6 +34,10 @@ export class NavbarComponent implements OnInit {
      });
     }
 
+
+    
+
+    // é do temlpate
     isHome() {
         var titlee = this.location.prepareExternalUrl(this.location.path());
 
