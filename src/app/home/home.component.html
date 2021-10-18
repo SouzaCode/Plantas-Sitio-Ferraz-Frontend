@@ -52,11 +52,20 @@
                   </div>
                   <p class="plant-code"><b>{{plant.Details.id_plant}}</b></p>
                   <div class="plant-status">
-                    <p class="text-success plant-condition">{{plant.Details.date_death?"Morta":"Viva"}} </p>
-                    <p class="plant-date">{{plant.Details.date_death?plant.Details.date_death :
-                      plant.Details.day_planted?plant.Details.day_planted+'/':''}} {{
-                      plant.Details.month_planted?plant.Details.month_planted+'/':''}}{{
-                      plant.Details.year_planted?plant.Details.year_planted:''}}</p>
+                    <p class="plant-condition" [class]="plant.Details.date_death?'text-danger':'text-success'">
+                      {{plant.Details.date_death?"Morta":"Viva"}} </p>
+                    <p class="plant-date">
+                      {{
+                      plant.Details.date_death?
+                      (plant.Details.date_death*1000 | date :'dd/MM/yyyy'):
+                      ((plant.Details.day_planted?
+                      plant.Details.day_planted+'/':'') +
+                      (plant.Details.month_planted?(plant.Details.month_planted+'/'):'')+
+                      (plant.Details.year_planted?plant.Details.year_planted:'')
+                      )}}
+
+
+                    </p>
                   </div>
                 </div>
 
