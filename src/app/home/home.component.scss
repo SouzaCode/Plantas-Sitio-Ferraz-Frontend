@@ -1,5 +1,5 @@
 .home-container {
-  min-width: 90vw;
+  min-width: 300px;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 .plants-list-container {
   margin-top: 72px;
   background-color: #d3d3d3;
-  width: 80%;
+  width: 70vw;
   min-height: 1000px;
   display: grid;
   grid-column-gap: 20px;
