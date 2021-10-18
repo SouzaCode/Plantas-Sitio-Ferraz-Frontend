@@ -14,6 +14,7 @@ import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 */
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +23,7 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    FooterComponent,
     LoginComponent
   ],
   imports: [
