@@ -38,6 +38,11 @@
   color: black;
   box-shadow: 0 0 1.3em gray;
 }
+.plant-details-home:hover {
+  box-shadow: 0 0 1.4em black;
+  height: 23.1vw;
+  width: 14.1vw;
+}
 .plant-img-container {
   flex-direction: column;
   align-items: center;
