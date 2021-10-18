@@ -46,12 +46,17 @@
                       [src]="plant.Images.length>0?'data:image/jpeg;base64,'+plant.Images[0].img_plant:'./assets/img/theme/team-3-800x800.jpg'"
                       alt="Raised image" class="img-fluid rounded plant-image">
                   </div>
-                  <p class="plant-sci-name">{{plant.scientific_name}}</p>
-                  <p class="plant-owner">{{plant.user_name}}</p>
-                  <p class="plant-code">{{plant.id_plant}}</p>
+                  <div class="plant-dets">
+                    <p class="plant-sci-name">{{plant.Details.scientific_name}}</p>
+                    <p class="plant-owner">{{plant.Details.user_name}}</p>
+                  </div>
+                  <p class="plant-code"><b>{{plant.Details.id_plant}}</b></p>
                   <div class="plant-status">
-                    <p class="text-success plant-condition"> -- </p>
-                    <p class="plant-date">1-/06/2021</p>
+                    <p class="text-success plant-condition">{{plant.Details.date_death?"Morta":"Viva"}} </p>
+                    <p class="plant-date">{{plant.Details.date_death?plant.Details.date_death :
+                      plant.Details.day_planted?plant.Details.day_planted+'/':''}} {{
+                      plant.Details.month_planted?plant.Details.month_planted+'/':''}}{{
+                      plant.Details.year_planted?plant.Details.year_planted:''}}</p>
                   </div>
                 </div>
 

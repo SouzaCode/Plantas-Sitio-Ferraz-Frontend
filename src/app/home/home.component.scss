@@ -55,12 +55,25 @@
   min-width: 100px;
   max-height: 400px;
 }
+.plant-dets {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  width: 11vw;
+  min-width: 100px;
+}
 .plant-sci-name {
+  font-style: italic;
+  font-size: small;
+  margin: 0px;
 }
 .plant-owner {
+  font-size: small;
 }
 
 .plant-code {
+  font-weight: 600;
 }
 
 .plant-status {
@@ -71,6 +84,7 @@
   width: 80%;
 }
 .plant-condition {
+  font-size: small;
 }
 .plant-date {
 }
