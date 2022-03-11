@@ -17,7 +17,7 @@ export default function Login() {
 
     async function handleLogin(e) {
         e.preventDefault();
-        const hash_password = MD5((email + Senha).replace(/\s+/g, ''))
+        const hash_password = MD5((email + Senha)).toString()
         const data = {
             email,
             hash_password
@@ -25,6 +25,7 @@ export default function Login() {
         try {
             const response = await api.post('/user/login', data);
             localStorage.setItem('token', response.data.token);
+            localStorage.setItem('profile_image', response.data.profile_image);
             console.log(response.data);
             history.push('/');
         } catch (err) {
