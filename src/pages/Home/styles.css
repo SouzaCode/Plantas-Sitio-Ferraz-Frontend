@@ -1,0 +1,109 @@
+.home-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  justify-content: center;
+}
+.results-box-header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 150px;
+}
+.search {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: left;
+}
+
+.filtros-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.filtro-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: left;
+  background-color: gainsboro;
+  height: 74px;
+  border: solid black;
+  border-width: 1px 1px 1px 1px;
+}
+.results-container {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #6d6d6d;
+}
+.home-plant-details-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  background-color: #fdfdfd;
+  margin: 40px;
+}
+.plant-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+.plant-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 35%;
+}
+.plant-status-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+}
+.plant-image-home {
+  height: 90%;
+  width: auto;
+  max-width: 90%;
+}
+.input-filtro {
+  margin-left: 16px;
+  width: 40%;
+}
+.home-title {
+  font-size: 40px;
+}
+.home-search-button {
+  background-color: #4c68d9;
+  border-radius: 8px;
+  border: 1px solid #4d2fc4;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+}
+.home-search-button:hover {
+  background-color: #0034d1;
+}
+.home-search-button:active {
+  position: relative;
+  top: 1px;
+}
