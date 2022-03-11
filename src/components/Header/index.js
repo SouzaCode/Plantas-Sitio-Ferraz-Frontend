@@ -6,8 +6,18 @@ import api from "../../services/api";
 
 import user_default_image from "../../assets/user_default.jpg";
 export default function Header() {
+    const [userImage, setUserImage] = useState("");
+    const [userToken, setUserToken] = useState("");
+    function handleLogout() {
+        localStorage.clear();
+        setUserImage("");
+        setUserToken("");
+    }
+    useEffect(async () => {
+        setUserImage(localStorage.getItem("profile_image"));
+        setUserToken(localStorage.getItem("token"));
 
-
+    }, []);
     return (
         <div className="header-container">
             <div className="site-info-container"><p>Minhas Plantas</p></div>
@@ -15,9 +25,21 @@ export default function Header() {
                 <input type="text" placeholder="Buscar Código" />
             </form></div>
             <div className="header-user-area-container" >
-                {localStorage.getItem("token") ? (<></>) : (<Link to="/login" ><p >Login</p></Link>
-                )}
-                <img src={localStorage.getItem("profile_image") ? "data:image/png;base64," + localStorage.getItem("profile_image") : user_default_image} className="header-user-img" alt="" />
+                {userToken ? (
+                    <>
+                        <img src={userImage && userImage !== "" && userImage !== "null" ? "data:image/png;base64," + userImage : user_default_image} className="header-user-img" alt="" />
+                        <p className="logout-text" onClick={() => { handleLogout() }}>Logout</p></>
+                )
+
+                    : (
+                        <div className="users-functions">
+                            <Link to="/login" ><p >Login</p></Link>
+                            <Link to="/register" ><p >registre-se</p></Link>
+                        </div>
+                    )}
+
+
+
             </div>
         </div>
     )
