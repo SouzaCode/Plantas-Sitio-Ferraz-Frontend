@@ -1,5 +1,4 @@
 .home-container {
-  min-width: 400px;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -10,66 +9,38 @@
 .plants-list-container {
   margin-top: 72px;
   background-color: #d3d3d3;
-  width: 70vw;
-  min-width: 300px;
-  min-height: 1000px;
-  display: grid;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(220px, 2fr)
-  );
-  padding: 80px 30px 80px 50px;
+  padding: 80px 0px 80px 0px;
   border-radius: 15px;
   box-shadow: 0 0 0.8em black;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
 }
 .plant-details-home {
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  height: 23vw;
-  min-height: 300px;
-  max-height: 400px;
-  width: 14vw;
-  min-width: 200px;
-  max-width: 250px;
+  height: auto;
+  margin: 10px 20px;
   align-items: center;
   color: black;
   box-shadow: 0 0 1.3em gray;
 }
 .plant-details-home:hover {
   box-shadow: 0 0 1.4em black;
-  height: 23.1vw;
-  width: 14.1vw;
 }
 .plant-img-container {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 12vw;
-  height: 12vw;
-  min-width: 160px;
-  min-height: 160px;
-  max-height: 420px;
+  width: 100%;
   padding-top: 15px;
 }
 .plant-image {
   object-fit: cover;
-  width: 11vw;
   height: 11vw;
   min-height: 150px;
-  min-width: 150px;
   max-height: 400px;
 }
 .plant-dets {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: left;
   width: 11vw;
-  min-width: 150px;
-  margin-top: 8px;
 }
 .plant-sci-name {
   font-style: italic;
