@@ -56,6 +56,9 @@
   background-color: #fdfdfd;
   margin: 40px;
 }
+.home-plant-details-container:hover {
+  box-shadow: 10px 5px 5px black;
+}
 .plant-image-container {
   display: flex;
   justify-content: center;
@@ -106,4 +109,10 @@
 .home-search-button:active {
   position: relative;
   top: 1px;
+}
+.morta-text {
+  color: red;
+}
+.viva-text {
+  color: green;
 }
