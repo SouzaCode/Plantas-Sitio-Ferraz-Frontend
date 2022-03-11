@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
+import { HomeService } from '../../home/home.service';
 
 @Component({
     selector: 'app-navbar',
@@ -11,8 +12,8 @@ export class NavbarComponent implements OnInit {
     public isCollapsed = true;
     private lastPoppedUrl: string;
     private yScrollStack: number[] = [];
-
-    constructor(public location: Location, private router: Router) {
+    plant_id_search: string = "aaa"
+    constructor(public location: Location, private router: Router,private homeService: HomeService) {
     }
 
     ngOnInit() {
@@ -36,7 +37,18 @@ export class NavbarComponent implements OnInit {
 
 
     
-
+    searchPlant():void{
+        
+        this.homeService.getPlantById(this.plant_id_search).
+        subscribe(
+            dt =>{
+                
+                this.homeService.plantas = dt
+                console.log(this.homeService.plantas);
+                
+            }
+        );
+    }
     // é do temlpate
     isHome() {
         var titlee = this.location.prepareExternalUrl(this.location.path());

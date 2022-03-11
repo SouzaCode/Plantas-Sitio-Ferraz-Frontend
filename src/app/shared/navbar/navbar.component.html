@@ -28,10 +28,11 @@
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         <li [ngClass]="!isCollapsed? 'nav-item dropdown' : 'plant-search'">
           <div class="input-group mb-8">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
-            </div>
-            <input class="form-control" placeholder="Procurar planta pelo código" type="text">
+
+            <form class="row col-lg-12" (ngSubmit)="searchPlant()">
+              <input class="form-control" placeholder="Procurar planta pelo código" type="text"
+                [value]="plant_id_search" (change)='plant_id_search=$event.target.value'>
+            </form>
           </div>
 
         </li>

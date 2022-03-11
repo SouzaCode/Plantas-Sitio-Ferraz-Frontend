@@ -42,10 +42,11 @@
 
 
 
-                <div class=" plant-details-home col-lg-3 col-md-4 col-sm-6 col-7" *ngFor="let plant of plantas.Plants">
+                <div class=" plant-details-home col-lg-3 col-md-4 col-sm-6 col-7"
+                  *ngFor="let plant of homeService.plantas.Plants">
                   <div class="plant-img-container">
                     <img
-                      [src]="plant.Images.length>0?'data:image/jpeg;base64,'+plant.Images[0].img_plant:'./assets/img/theme/team-3-800x800.jpg'"
+                      [src]="plant.Images.length>0?'data:image/jpeg;base64,'+plant.Images[0].img_plant:'./assets/img/default/default_plant.jpg'"
                       alt="Raised image" class="img-fluid rounded plant-image">
                   </div>
                   <div class="plant-dets">

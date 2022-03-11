@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
         middle: false,
         right: false
     };
-    plantas: AllPlants;
 
     focus;
     focus1;
@@ -23,11 +22,13 @@ export class HomeComponent implements OnInit {
      }
 
     ngOnInit() {
-        this.homeService.getAllPlants().subscribe(
+        this.homeService.getAllPlants().
+        subscribe(
             dt =>{
-                this.plantas = dt;
                 
-        console.log(this.plantas);
+                this.homeService.plantas = dt
+                console.log(this.homeService.plantas);
+                
             }
         );
         
