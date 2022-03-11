@@ -1,0 +1,24 @@
+.header-container {
+  width: 100%;
+  background-color: aquamarine;
+  height: 56px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 400px;
+}
+.header-user-area-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90px;
+  justify-content: space-between;
+}
+.header-user-img {
+  height: 5vh;
+  width: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
