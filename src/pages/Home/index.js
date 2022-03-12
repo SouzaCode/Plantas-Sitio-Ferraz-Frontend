@@ -58,6 +58,7 @@ export default function Home() {
                 <div className="results-container">
                     {plantas ? (plantas.map(planta => (
                         <div key={planta.Details.id_plant}
+                            onClick={() => { history.push('/plant/' + (planta.Details.id_plant)) }}
                             className="home-plant-details-container">
                             <div className="plant-image-container">
                                 <img className="plant-image-home" src={planta.Images.length ? "data:image/png;base64," + planta.Images[0].img_plant : default_plant_image} alt="" />

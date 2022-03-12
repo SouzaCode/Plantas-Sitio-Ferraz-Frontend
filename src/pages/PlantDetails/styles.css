@@ -1,0 +1,98 @@
+.plant-details-container {
+  margin: 90px 60px;
+  display: flex;
+  flex-direction: column;
+}
+.plant-code-container {
+  font-size: 30px;
+  font-weight: 900;
+}
+.plant-basic-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  min-width: 750px;
+}
+.plant-images-container {
+  height: 400px;
+  margin: 25px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border: solid black;
+  border-radius: 15px 1px 15px 1px;
+}
+.plant-image-details {
+  height: 75%;
+  width: auto;
+}
+.plant-text-descriptions-container {
+  width: 20%;
+  border-width: 1px;
+  border: solid black;
+  border-radius: 1px 15px 1px 15px;
+  margin: 25px 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  justify-content: space-around;
+}
+.observation-container {
+  min-height: 20%;
+  max-height: 30%;
+}
+.common-names-text {
+  margin-top: 4px;
+  font-size: 13px;
+}
+.observations-text {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.plant-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btn-div {
+  border: 1px solid;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.morreu-btn {
+  border-color: red;
+  color: red;
+}
+.morreu-btn:hover {
+  background-color: red;
+  color: white;
+}
+.edit-plant-btn {
+  border-color: #5555f3;
+  color: #5555f3;
+}
+.edit-plant-btn:hover {
+  background-color: blue;
+  color: white;
+}
+.planter-info-container {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+}
+.planter-image-container {
+  margin-right: 16px;
+}
+.planter-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
