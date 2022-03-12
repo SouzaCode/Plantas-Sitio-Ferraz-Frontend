@@ -20,9 +20,9 @@ export default function Header() {
     }, []);
     return (
         <div className="header-container">
-            <div className="site-info-container"><p>Minhas Plantas</p></div>
+            <Link to="/" className="site-info-container"><p>Minhas Plantas</p></Link>
             <div className="searchbar-container"><form >
-                <input type="text" placeholder="Buscar Código" />
+                <input className="navbar-input" type="text" placeholder="Buscar Código" />
             </form></div>
             <div className="header-user-area-container" >
                 {userToken ? (

@@ -13,3 +13,6 @@ form input {
   border-radius: 8px;
   padding: 0 24px;
 }
+p {
+  font-family: Roboto, sans-serif;
+}
