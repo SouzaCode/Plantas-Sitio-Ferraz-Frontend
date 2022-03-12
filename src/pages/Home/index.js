@@ -12,7 +12,12 @@ export default function Home() {
     const [plantas, setPlantas] = useState([]);
     const history = useHistory();
     useEffect(async () => {
-        const response = await api.get('/plants');
+        const response = await api.get('/plants', {
+            headers: {
+                is_private: 0,
+                token: localStorage.getItem("token") ? localStorage.getItem("token") : ""
+            }
+        });
         console.log(response.data.Plants);
         setPlantas(response.data.Plants)
     }, []);
@@ -39,7 +44,7 @@ export default function Home() {
                 <div className="results-box-header-container">
                     <div className="search">
                         <p className="home-title">Busca por Filtro</p>
-                        <button className="home-search-button">Ver Lista de espécies</button>
+                        <button className="home-search-button">Procurar</button>
                     </div>
 
                     <div className="filtros-container">
