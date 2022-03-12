@@ -2,6 +2,7 @@
   margin: 40px 60px;
   display: flex;
   flex-direction: column;
+  min-width: 950px;
 }
 .plant-code-container {
   font-size: 30px;
@@ -15,6 +16,8 @@
   min-width: 950px;
 }
 .carousel-image-container {
+}
+.additional-info-container {
 }
 .plant-images-container {
   margin: 25px;

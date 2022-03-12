@@ -1,5 +1,5 @@
 .header-container {
-  width: 100%;
+  width: 100vw;
   background-color: aquamarine;
   height: 86px;
   padding: 16px;
@@ -7,7 +7,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-width: 400px;
+  min-width: 1050px;
 }
 .header-user-area-container {
   display: flex;
