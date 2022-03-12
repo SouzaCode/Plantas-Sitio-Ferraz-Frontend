@@ -43,6 +43,7 @@
 .results-container {
   margin-top: 16px;
   display: flex;
+  min-height: 400px;
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 5px;
@@ -55,9 +56,12 @@
   width: 200px;
   background-color: #fdfdfd;
   margin: 40px;
+  cursor: pointer;
 }
 .home-plant-details-container:hover {
   box-shadow: 10px 5px 5px black;
+  height: 305px;
+  width: 205px;
 }
 .plant-image-container {
   display: flex;
