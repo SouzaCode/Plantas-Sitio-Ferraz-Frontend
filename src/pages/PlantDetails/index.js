@@ -3,6 +3,9 @@ import { Link, useHistory } from "react-router-dom";
 import api from "../../services/api";
 import Header from "../../components/Header";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
 import "./styles.css";
 
 import user_default_image from "../../assets/user_default.jpg";
@@ -55,7 +58,14 @@ export default function PlantDetails(props) {
                     <div className="plant-code-container"><p>{plantDetails.Details.id_plant}</p></div>
                     <div className="plant-basic-info-container">
                         <div className="plant-images-container">
-                            <img className="plant-image-details" src={default_plant_img} alt="" />
+
+                            {plantDetails.Photos.length > 0 ? (<Carousel showArrows={false}>
+                                {plantDetails.Photos.map(pht => (
+                                    <div className="carousel-image-container">
+                                        <img className="plant-image-details" src={"data:image/png;base64," + pht.img_plant} alt="" />
+                                    </div>
+                                ))}
+                            </Carousel>) : (<img className="plant-image-details" src={default_plant_img} alt="" />)}
                         </div>
                         <div className="plant-text-descriptions-container">
                             <div className="plant-name-container">
