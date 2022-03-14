@@ -50,6 +50,18 @@ export default function PlantDetails(props) {
 
         return str;
     }
+    function formatCommonNames(c_names) {
+        let txt = ""
+        for (let i in c_names) {
+            //console.log(c_names[i]);
+            txt = txt + c_names[i].name
+            if (i !== c_names.length - 1) {
+                txt = txt + ", "
+            }
+
+        }
+        return txt
+    }
     return (
         <>
             <Header></Header>
@@ -79,7 +91,7 @@ export default function PlantDetails(props) {
                             </div>
                             <div className="plant-common-names-container">
                                 <p>Também é conhecida como:</p>
-                                <p className="common-names-text"><i>Araucaria, pinheiro do paraná</i></p>
+                                <p className="common-names-text"><i>{formatCommonNames(plantDetails.Common_Names)}</i></p>
                             </div>
                             <div className="observation-container">
                                 <p>Observações</p>

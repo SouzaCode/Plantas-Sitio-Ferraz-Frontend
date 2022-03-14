@@ -7,13 +7,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-width: 1050px;
 }
 .header-user-area-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 90px;
+  width: 120px;
   justify-content: space-between;
 }
 .header-user-img {
@@ -27,6 +26,10 @@
 }
 .logout-text {
   cursor: pointer;
+}
+
+.logout-text:hover {
+  font-weight: 600;
 }
 .navbar-input {
   width: 30vw;
