@@ -55,7 +55,7 @@ export default function PlantDetails(props) {
         for (let i in c_names) {
             //console.log(c_names[i]);
             txt = txt + c_names[i].name
-            if (i !== c_names.length - 1) {
+            if (i < c_names.length - 1) {
                 txt = txt + ", "
             }
 
